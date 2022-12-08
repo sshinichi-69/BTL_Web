@@ -1,0 +1,150 @@
+#slider {
+    background-image: url('https://resource.logitechg.com/w_1800,c_limit,f_auto,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/gaming/en/plp-landing/plp-landing-hero-1-desktop.png?v=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(100vh - 46px - 126px);
+}
+
+#slider > .content {
+    width: 25%;
+    margin-left: 9%;
+    padding-top: 100px;
+}
+
+#slider > .content > .pr {
+    width: 75%;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#slider > .content > .title {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#slider > .content > hr {
+    margin: 25px 0;
+    width: 30%;
+    border: 6px solid #C3C6C8;
+    background-color: #C3C6C8;
+}
+
+#slider > .content > .description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.375;
+}
+
+/* ----------------------------------------------------------- */
+#introduce {
+    min-height: 25vh;
+    height: 400px;
+    padding: 40px;
+    background-color: #F4F4F4;
+    display: flex;
+    justify-content: center;
+}
+
+#introduce > .content {
+    padding-top: 8%;
+    text-align: center;
+    max-width: 600px;
+}
+
+#introduce > .content > .title {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+#introduce > .content > .description {
+    font-weight: 300px;
+    font-size: 16px;
+    line-height: 1.375;
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------------- */
+#product > .mouse {
+    background-image: url('https://resource.logitechg.com/w_1800,c_limit,f_auto,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/gaming/en/plp-landing/plp-landing-banner-1-desktop.png?v=1');
+}
+
+#product > .headphone {
+    background-image: url('https://resource.logitechg.com/w_1800,c_limit,f_auto,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/gaming/en/plp-landing/plp-landing-banner-4-desktop.png?v=1');
+}
+
+#product > .keyboard {
+    background-image: url('https://resource.logitechg.com/w_1800,c_limit,f_auto,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/gaming/en/plp-landing/plp-landing-banner-3-desktop.png?v=1');
+}
+
+#product > .item {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#product > .item > .content {
+    position: absolute;
+    width: 25%;
+    margin: 40px;
+    padding-top: 100px;
+}
+
+#product > .item > .right {
+    position: absolute;
+    right: 0;
+}
+
+#product > .item > .content > .title {
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 0.4px;
+}
+
+#product > .item > .content > hr {
+    margin: 25px 0;
+    width: 30%;
+    border: 6px solid #C3C6C8;
+    background-color: #C3C6C8;
+}
+
+#product > .item > .content > .description {
+    font-weight: 300px;
+    font-size: 16px;
+    line-height: 1.375;
+    margin-bottom: 20px;
+}
+
+#product > .item > .content > a {
+    color: #00B8FC;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+#product > .item > .content > a:hover > i {
+    padding-left: 5px;
+}
+
+/* ----------------------------------------------------------- */
+#contact {
+    margin: 30px;
+}
+
+#contact > div {
+    margin: 5px;
+}
+
+#contact > div > a {
+    color: blue;
+    text-decoration: none;
+}

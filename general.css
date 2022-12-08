@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body > div {
+    min-height: calc(100vh - 120px) !important;
+}
+
+.black-bgr {
+    background-color: black;
+    color: white;
+}
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.nav > ul {
+    display: flex;
+    list-style-type: none;
+}

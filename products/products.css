@@ -1,0 +1,81 @@
+#slider {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(100vh - 46px - 126px);
+}
+
+#slider.mouse {
+    background-image: url('https://resource.logitechg.com/w_1800,c_limit,f_auto,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/gaming/en/plp-mice/plp-mice-hero-desktop-2.png?v=1');
+}
+
+#slider.keyboard {
+    background-image: url('https://resource.logitechg.com/w_1800,c_limit,f_auto,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/gaming/en/plp-keyboards/plp-keyboard-hero-desktop.png?v=1');
+}
+
+#slider.audio {
+    background-image: url('https://resource.logitechg.com/w_1800,c_limit,f_auto,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/gaming/en/plp-audio/plp-audio-hero-desktop-g935.png?v=1');
+}
+
+#slider > .content {
+    position: absolute;
+    width: 30%;
+    margin: 40px;
+    padding-top: 100px;
+}
+
+#slider > .content > .title {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 0.4px;
+}
+
+#slider > .content > hr {
+    margin: 25px 0;
+    width: 84px;
+    border: 3px solid #C3C6C8;
+    background-color: #C3C6C8;
+}
+
+#slider > .content > .description {
+    font-weight: 300px;
+    font-size: 16px;
+    line-height: 1.375;
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------------- */
+#product > ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    padding: 10px;
+    list-style-type: none;
+}
+
+#product > ul > li > .image {
+    margin: 10px;
+    height: 70%;
+}
+
+#product > ul > li > .image > img {
+    width: 100%;
+}
+
+#product > ul > li > .description {
+    padding-left: 35px;
+}
+
+#product > ul > li > .description > * {
+    color: black;
+    text-decoration: none;
+    margin: 17px 0 10px 0;
+    line-height: 1.22;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#product > ul > li > .description > .name {
+    height: 42px;
+}
