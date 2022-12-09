@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="gaming-item.css">
+    <link rel="stylesheet" href="../themify-icons/themify-icons.css">
+    <script src="../script.js"></script>
+    <script src="products.js"></script>
+    <script src="gaming-item.js"></script>
+    <title></title>
+</head>
+<body onload="init(1); showGamingItem()">
+    <div>
+        <div id="header" class="nav"></div>
+        <div id="navigation" class="nav"></div>
+        <div id="product" class="black-bgr">
+            <div class="image">
+                <div class="main">
+                    
+                </div>
+                <div class="other">
+                    
+                </div>
+            </div>
+            <div class="detail">
+                <div class="title uppercase"></div>
+                <div class="price"></div>
+                <div class="description"></div>
+                <form action="" class="buy">
+                    <label for="">Số lượng: </label>
+                    <button type="button" onclick="decrease()">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" onclick="increase()">+</button>
+                    <button type="submit">Thêm vào giỏ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<footer></footer>
+</html>

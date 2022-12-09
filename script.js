@@ -1,7 +1,7 @@
 function init(inner) {
-    let innerAddr = '/';
+    let innerAddr = '';
     for (let i = 0; i < inner; i++) {
-        innerAddr = '..' + innerAddr;
+        innerAddr = '../' + innerAddr;
     }
     // init header
     let innerHeader = '';
@@ -15,7 +15,14 @@ function init(inner) {
     innerNavigation += '<ul>';
     innerNavigation += '<li><a href="#" class="uppercase">Giới thiệu</a></li>';
     innerNavigation += '<li><a href="' + innerAddr + 'products.html" class="uppercase">Sản phẩm</a></li>';
-    innerNavigation += '<li><a href="#" class="uppercase">Bảng giá</a></li>';
+    innerNavigation += '<li class="dropdown">';
+    innerNavigation += '<a href="#" class="uppercase dropbtn">Bảng giá</a>';
+    innerNavigation += '<div class="dropdown-content">';
+    innerNavigation += '<a href="' + innerAddr + 'products/gaming-mice.html" class="uppercase">Chuột chơi game</a>';
+    innerNavigation += '<a href="' + innerAddr + 'products/gaming-audio.html" class="uppercase">Âm thanh trò chơi</a>';
+    innerNavigation += '<a href="' + innerAddr + 'products/gaming-keyboards.html" class="uppercase">Bàn phím chơi game</a>';
+    innerNavigation += '</div>';
+    innerNavigation += '</li>';
     innerNavigation += '<li><a href="' + innerAddr + 'contact.html" class="uppercase">Liên hệ</a></li>';
     innerNavigation += '<li><a href="#" class="uppercase">Tin tức</a></li>';
     innerNavigation += '<li><a href="#"><i class="ti-search"></i></a></li>';
