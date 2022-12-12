@@ -13,7 +13,7 @@ function init(inner) {
     // init navigation
     let innerNavigation = '';
     innerNavigation += '<ul>';
-    innerNavigation += '<li><a href="#" class="uppercase">Giới thiệu</a></li>';
+    innerNavigation += '<li><a href="' + innerAddr + 'aboutus.html" class="uppercase">Giới thiệu</a></li>';
     innerNavigation += '<li><a href="' + innerAddr + 'products.html" class="uppercase">Sản phẩm</a></li>';
     innerNavigation += '<li class="dropdown">';
     innerNavigation += '<a href="#" class="uppercase dropbtn">Bảng giá</a>';
