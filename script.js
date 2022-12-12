@@ -24,7 +24,7 @@ function init(inner) {
     innerNavigation += '</div>';
     innerNavigation += '</li>';
     innerNavigation += '<li><a href="' + innerAddr + 'contact.html" class="uppercase">Liên hệ</a></li>';
-    innerNavigation += '<li><a href="#" class="uppercase">Tin tức</a></li>';
+    innerNavigation += '<li><a href="' + innerAddr + 'news.html" class="uppercase">Tin tức</a></li>';
     innerNavigation += '<li><a href="#"><i class="ti-search"></i></a></li>';
     innerNavigation += '</ul>';
     document.getElementById("navigation").innerHTML = innerNavigation;
