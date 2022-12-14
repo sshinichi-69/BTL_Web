@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     include 'header.php';
     include 'footer.php';
 ?>
@@ -18,7 +20,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="body">
         <?php headerHTML(0) ?>
         <div id="slider" class="white-text">
             <div class="content">

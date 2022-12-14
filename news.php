@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     include 'header.php';
     include 'footer.php';
 ?>
@@ -19,7 +21,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="body">
         <?php headerHTML(0) ?>
         <!-- Trending Area Start -->
     <div class="trending-area fix">

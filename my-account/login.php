@@ -1,5 +1,6 @@
 <?php
-require '../init.php';
+$login_error = '';
+
 session_start();
 
 // Kiểm tra nếu đã đăng nhập thì quay về homepage
@@ -12,6 +13,7 @@ $msg = '';
 // Kiểm tra dữ liệu POST lên
 if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['password']) && !empty($_POST ['password']))
 {
+    include '../init.php';
     // Gán tài khoản và mật khẩu nhận được từ form vào 2 biến tương ứng
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -19,19 +21,21 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
     // Lấy thông tin người dùng từ DB
     $user = mysqli_fetch_assoc(mysqli_query($link, "SELECT * FROM accounts WHERE username='$username'"));
     // Kiểm tra sự tồn tại của người dùng và mật khẩu có trùng khớp
-    if ($user && $user['password'] == md5($password))
+    if ($user && $user['password'] == $password)
     {
         // Tạo session lưu thông tin người dùng đăng nhập thành công
         $_SESSION['user'] = $user;
         
         // Chuyển hướng về trang quản trị hay trang profile
-        if ($user['user'] == "admin")
-            header('admin.php');
+        if ($user['username'] == "admin")
+            header('Location: ../my-account.php');
         else
-            header('profile.php');        
+            header('Location: ../my-account.php');        
     }
-    else 
-        header('register.php');
+    else {
+        $login_error = '<div id="error">Tên đăng nhập hoặc mật khẩu bạn đã nhập không chính xác</div>';
+    }
+    mysqli_close($link);
 }
 ?>
 
@@ -49,6 +53,7 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
 </head>
 
 <body>
+    <?php echo($GLOBALS['login_error']); ?>
     <div id="form" class="black-bgr">
         <form role ="form" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "post">
             <div class="note"><label for="">Đăng nhập bằng ID Logi.</label></div>

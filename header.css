@@ -48,17 +48,20 @@
 }
 
 #header > ul > li {
-    margin: 0 20px;
     padding-top: 13px;
 }
 
-#header > ul > li > a {
+#header > ul > li, #header > ul > li > ul > li {
+    margin: 0 20px;
+}
+
+#header > ul > li > a, #header > ul > li > ul > li > a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
     font-size: 13px;
 }
 
-#header > ul > li:hover > a {
+#header > ul > li > ul > li:hover > a {
     text-decoration: none;
     color: rgba(255, 255, 255);
     font-size: 13px;
@@ -68,7 +71,7 @@
     padding: 0 9px;
 }
 
-#header > ul > .account {
+#header > ul > li.right {
     position: absolute;
     right: 0;
 }

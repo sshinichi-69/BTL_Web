@@ -8,7 +8,7 @@ html {
     font-family: "Brown-Pro", Helvetica, Arial, sans-serif;
 }
 
-body > div {
+#body {
     min-height: calc(100vh - 120px) !important;
 }
 

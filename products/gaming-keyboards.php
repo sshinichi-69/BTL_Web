@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     include '../header.php';
     include '../footer.php';
     include './products.php';
@@ -20,7 +22,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="body">
         <?php headerHTML(1) ?>
         <div id="slider" class="white-text keyboard">
             <div class="content">

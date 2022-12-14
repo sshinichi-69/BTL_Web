@@ -1,3 +1,4 @@
+
 <?php
     function headerHTML($inner) {
         $innerAddr = '';
@@ -7,8 +8,19 @@
         // init header
         echo('<div id="header" class="nav">');
         echo('<ul>');
+        echo('<li class="left">');
+        echo('<ul>');
         echo('<li class="logo"><a href="' . $innerAddr . 'index.php"><img src="' . $innerAddr . 'img/logo-logitech-overlay.svg" alt="logo" height="20"></a></li>');
-        echo('<li class="account"><a href="' . $innerAddr . 'my-account.php" class="uppercase"><i class="ti-user"></i>Tài khoản của tôi</a></li>');
+        echo('</ul>');
+        echo('</li>');
+        echo('<li class="right nav">');
+        echo('<ul>');
+        echo('<li><a href="' . $innerAddr . 'my-account.php" class="uppercase"><i class="ti-user"></i>Tài khoản của tôi</a></li>');
+        if (isset($_SESSION['user'])) {
+            echo('<li><a href="./my-account/logout.php"  class="uppercase">Đăng xuất</a></li>');
+        }
+        echo('</ul>');
+        echo('</li>');
         echo('</ul>');
         echo('</div>');
         // init navigation

@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     include 'header.php';
     include 'footer.php';
 ?>
@@ -18,19 +20,28 @@
 </head>
 
 <body>
-    <div>
+    <div id="body">
         <?php headerHTML(0) ?>
         <div id="account">
             <div class="content">
-                <div class="title uppercase white-text">Tài khoản của tôi</div>
-                <div class="button">
-                    <button type="button" class="login">
-                        <a href="my-account/login.php" class="uppercase">Đăng nhập</a>
-                    </button>
-                    <button type="button" class="create-account">
-                        <a href="my-account/signup.php" class="uppercase">Tạo tài khoản</a>
-                    </button>
-                </div>
+                <?php
+                    if (isset($_SESSION['user'])) {
+                        echo('<img src="' . $_SESSION['user']['image'] . '" alt="avatar" class="avatar">');
+                        echo('<div class="hello uppercase white-text">Hi, ' . $_SESSION['user']['first_name'] . '</div>');
+                        echo('<a href="my-account/logout.php" class="logout uppercase white-text">Đăng xuất</a>');
+                    }
+                    else {
+                        echo('<div class="title uppercase white-text">Tài khoản của tôi</div>');
+                        echo('<div class="button">');
+                        echo('<button type="button" class="login">');
+                        echo('<a href="my-account/login.php" class="uppercase">Đăng nhập</a>');
+                        echo('</button>');
+                        echo('<button type="button" class="create-account">');
+                        echo('<a href="my-account/signup.php" class="uppercase">Tạo tài khoản</a>');
+                        echo('</button>');
+                        echo('</div>');
+                    }
+                ?>
             </div>
         </div>
     </div>

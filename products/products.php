@@ -52,12 +52,13 @@
 
     function getItemListFromDB($type) {
         require './connect-product.php';
-        $sql = "SELECT image1, image2, image3, image4, name, price FROM products WHERE type='" . $type . "'ORDER BY id ASC";
+        $sql = "SELECT image1, image2, image3, image4, name, price FROM products WHERE type='$type' ORDER BY id ASC";
         $result = mysqli_query($productLink, $sql);
         $res = array();
         while($row = mysqli_fetch_assoc($result)) {
             array_push($res, array('image' => array($row['image1'], $row['image2'], $row['image3'], $row['image4']), 'name' => $row['name'], 'price' => $row['price']));
         }
+        mysqli_close($productLink);
         return $res;
     }
 ?>
