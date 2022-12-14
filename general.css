@@ -12,9 +12,13 @@ body > div {
     min-height: calc(100vh - 120px) !important;
 }
 
-.black-bgr {
-    background-color: black;
+.white-text {
     color: white;
+}
+
+.black-bgr {
+    color: white;
+    background-color: black;
 }
 
 .uppercase {

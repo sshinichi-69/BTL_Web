@@ -1,0 +1,62 @@
+#account {
+    background-image: url('https://resource.logitechg.com/w_1800,c_limit,f_auto,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/gaming/en/myaccount/myaccount-logitechg.png?v=1');
+    min-height: calc(100vh - 46px - 126px - 120px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#account > .content {
+    position: relative;
+    margin-left: 25%;
+    text-align: center;
+    align-self: center;
+    width: calc(50% - 20px);
+    margin-right: 20px;
+    padding-top: 10%;
+}
+
+#account > .content > .title {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+#account > .content > .button {
+    margin-top: 50px;
+}
+
+#account > .content > .button > button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-left: 25px;
+    border: none;
+}
+
+#account > .content > .button > .login {
+    background-color: #f4f4f4;
+}
+
+#account > .content > .button > .create-account {
+    background-color: #00B8FC;
+}
+
+#account > .content > .button > button > a {
+    color: #2f3132;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 34px;
+    font-weight: 700;
+}
+
+#account > .content > .button > .login:hover > a {
+    color: #00B8FC;
+}
+
+#account > .content > .button > .create-account:hover {
+    background-color: #0090bf;
+}

@@ -1,5 +1,11 @@
+<?php
+    include 'header.php';
+    include 'footer.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +13,12 @@
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../themify-icons/themify-icons.css">
-    <script src="../script.js"></script>
+    <link rel="stylesheet" href="themify-icons/themify-icons.css">
     <title>Chuột chơi game | Logitech G</title>
 </head>
-<body onload="init(0)">
+
+<body>
+    <?php headerHTML(0) ?>
     <div>
         <div id="header" class="nav"></div>
         <div id="navigation" class="nav"></div>
@@ -36,5 +43,7 @@
         </div>
     </div>
 </body>
-<footer></footer>
+<footer>
+    <?php footerHTML(0) ?>
+</footer>
 </html>

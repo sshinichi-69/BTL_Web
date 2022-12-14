@@ -1,0 +1,75 @@
+#form {
+    width: 100vw;
+    height: 100vh;
+}
+
+form {
+    display: block;
+    width: calc((100% - 48px) / 2);
+    height: calc(100vh - 32px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+
+form > * {
+    width: 100%;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+
+form > .title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+form > .note {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+form > .label {
+    font-size: 10px;
+}
+
+form > input, form > input:focus {
+    height: 60px;
+    font-size: 1.2em;
+    font-weight: 200;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #676767;
+    padding: 22px 10px 6px 0;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+form > button {
+    min-height: 51px;
+    background-color: #00B8FC;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: bold;
+}
+
+form > button:hover {
+    background-color: #0090BF;
+}
+
+form > .addition {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+}
+
+form > .addition > a:hover {
+    color: #00B8FC;
+}
