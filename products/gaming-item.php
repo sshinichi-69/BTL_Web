@@ -1,5 +1,11 @@
+<?php
+    include '../header.php';
+    include '../footer.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +14,14 @@
     <link rel="stylesheet" href="../header.css">
     <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="../themify-icons/themify-icons.css">
-    <script src="../script.js"></script>
     <script src="products.js"></script>
-    <title>Tai nghe & Tai nghe có mic chơi game, Tai nghe không dây | Logitech G</title>
+    <script src="gaming-item.js"></script>
+    <title></title>
 </head>
-<body onload="init(1); getAudioList()">
+
+<body>
     <div>
-        <div id="header" class="nav"></div>
-        <div id="navigation" class="nav"></div>
+        <?php headerHTML(1) ?>
         <div id="slider" class="white-text audio">
             <div class="content">
                 <div class="uppercase title">Tai nghe và loa chơi game</div>
@@ -28,5 +34,7 @@
         </div>
     </div>
 </body>
-<footer></footer>
+<footer>
+    <?php footerHTML(1) ?>
+</footer>
 </html>

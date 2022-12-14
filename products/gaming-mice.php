@@ -1,5 +1,12 @@
+<?php
+    include '../header.php';
+    include '../footer.php';
+    include './products.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +15,13 @@
     <link rel="stylesheet" href="../header.css">
     <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="../themify-icons/themify-icons.css">
-    <script src="../script.js"></script>
     <script src="products.js"></script>
     <title>Chuột chơi game | Logitech G</title>
 </head>
-<body onload="init(1); getMouseList()">
+
+<body>
     <div>
-        <div id="header" class="nav"></div>
-        <div id="navigation" class="nav"></div>
+        <?php headerHTML(1) ?>
         <div id="slider" class="white-text mouse">
             <div class="content">
                 <div class="uppercase title">Chuột chơi game</div>
@@ -24,9 +30,11 @@
             </div>
         </div>
         <div id="product">
-            
+            <?php getMouseList() ?>
         </div>
     </div>
 </body>
-<footer></footer>
+<footer>
+    <?php footerHTML(1) ?>
+</footer>
 </html>

@@ -4,7 +4,7 @@ session_start();
 
 // Kiểm tra nếu đã đăng nhập thì quay về homepage
 if (isset($_SESSION['user'])) {
-    header('../index.html');
+    header('../index.php');
 }
 
 $msg = '';
@@ -35,50 +35,30 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
 }
 ?>
 
-<!-- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <style>
-        body {text-align: center;}
-
-        .container {
-            width: 61%;
-            margin: auto;
-        }
-
-        .box {display: flex;}
-
-        form {
-            margin: auto;
-            width: 37%;
-        }
-
-            form > div {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-        .lbl {text-align: left;}
-
-        .btn {
-            display: flex;
-            width: 16%;
-        }
-    </style>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../themify-icons/themify-icons.css">
+    <title>Logi ID</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="box">
-            <form role = "form" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "post">
-                <h4><?php echo $msg; ?></h4>
-                <input type = "text" name = "username" placeholder = "username" required autofocus>
-                <input type = "password" name = "password" placeholder = "password" required>
-                <button type = "submit" name = "login">Login</button>
-            </form>
-        </div>
+    <div id="form" class="black-bgr">
+        <form role ="form" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "post">
+            <div class="note"><label for="">Đăng nhập bằng ID Logi.</label></div>
+            <div class="label uppercase"><label for="">Tên đăng nhập</label></div>
+            <input type="text" name="username" id="username" class="white-text" required><br>
+            <div class="label uppercase"><label for="">Mật khẩu</label></div>
+            <input type="password" name="password" id="password" class="white-text" required><br>
+            <button type="submit" class="uppercase">Đăng nhập</button><br>
+            <div class="addition uppercase"><a href="signup.php" class="white-text">Tạo tài khoản</a></div>
+        </form>
     </div>
 </body>
-</html> -->
+</html>

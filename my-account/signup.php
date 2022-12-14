@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../themify-icons/themify-icons.css">
     <title>Logi ID</title>
 </head>
+
 <body>
     <div id="form" class="black-bgr">
         <form action="">
@@ -23,9 +25,8 @@
             <div class="label uppercase"><label for="">Mật khẩu</label></div>
             <input type="password" name="password" id="" class="white-text" required><br>
             <button type="submit" class="uppercase">Tạo</button><br>
-            <div class="addition uppercase"><a href="login.html" class="white-text">Đã có tài khoản? Đăng nhập</a></div>
+            <div class="addition uppercase"><a href="login.php" class="white-text">Đã có tài khoản? Đăng nhập</a></div>
         </form>
     </div>
 </body>
-<footer></footer>
 </html>

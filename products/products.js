@@ -229,7 +229,7 @@ function getItemList(type) {
         description.className = "description";
         // set name
         let name = document.createElement('a');
-        name.href = './gaming-item.html';
+        name.href = './gaming-item.php';
         name.className = "uppercase name";
         name.innerHTML = item.name;
         name.value = item.id;

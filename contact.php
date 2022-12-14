@@ -18,10 +18,8 @@
 </head>
 
 <body>
-    <?php headerHTML(0) ?>
     <div>
-        <div id="header" class="nav"></div>
-        <div id="navigation" class="nav"></div>
+        <?php headerHTML(0) ?>
         <div id="contact">
             <div>Số điện thoại: 0244 458 2158</div>
             <div>
