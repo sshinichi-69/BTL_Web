@@ -19,7 +19,7 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
     $password = $_POST['password'];
     
     // Lấy thông tin người dùng từ DB
-    $user = mysqli_fetch_assoc(mysqli_query($link, "SELECT * FROM accounts WHERE username='$username'"));
+    $user = mysqli_fetch_assoc(mysqli_query($link, "SELECT * FROM users WHERE username='$username'"));
     // Kiểm tra sự tồn tại của người dùng và mật khẩu có trùng khớp
     if ($user && $user['password'] == $password)
     {

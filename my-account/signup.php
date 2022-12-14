@@ -19,7 +19,7 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
     $username = $_POST['username'];
     
     // Lấy thông tin người dùng từ DB
-    $user = mysqli_fetch_assoc(mysqli_query($link, "SELECT * FROM accounts WHERE username='$username'"));
+    $user = mysqli_fetch_assoc(mysqli_query($link, "SELECT * FROM users WHERE username='$username'"));
     // Kiểm tra sự tồn tại của người dùng và mật khẩu có trùng khớp
     if ($user) {
         $signup_error = '<div id="error">Tên đăng nhập đã tồn tại</div>';
@@ -30,7 +30,7 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
         $first_name = $_POST['first-name'];
         $last_name = $_POST['last-name'];
         $image = 'https://www.iconspng.com/images/circled-user-icon.jpg';
-        mysqli_query($link, "INSERT INTO accounts (username, password, first_name, last_name, image) VALUES ('$username', '$password', '$first_name', '$last_name', '$image')");
+        mysqli_query($link, "INSERT INTO users (username, password, first_name, last_name, image) VALUES ('$username', '$password', '$first_name', '$last_name', '$image')");
         header('Location: ../my-account.php');
     }
     mysqli_close($link);

@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../header.css">
     <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="../themify-icons/themify-icons.css">
-    <script src="products.js"></script>
     <title>Bàn phím chơi game | Logitech G</title>
 </head>
 

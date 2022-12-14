@@ -1,4 +1,3 @@
-
 <?php
     function headerHTML($inner) {
         $innerAddr = '';
@@ -15,6 +14,9 @@
         echo('</li>');
         echo('<li class="right nav">');
         echo('<ul>');
+        if (isset($_SESSION['user'])) {
+            echo('<li><a href="' . $innerAddr . 'cart.php"><i class="ti-shopping-cart"></i></a></li>');
+        }
         echo('<li><a href="' . $innerAddr . 'my-account.php" class="uppercase"><i class="ti-user"></i>Tài khoản của tôi</a></li>');
         if (isset($_SESSION['user'])) {
             echo('<li><a href="./my-account/logout.php"  class="uppercase">Đăng xuất</a></li>');

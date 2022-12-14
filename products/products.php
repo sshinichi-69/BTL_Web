@@ -24,7 +24,7 @@
             echo('</div>');
             // set description
             echo('<div class="description">');
-            echo('<a href="./gaming-item.php" class="uppercase name">' . $item['name'] . '</a>');
+            echo('<a href="./gaming-item.php?id=' . $item['id'] . '&idx=0" class="uppercase name">' . $item['name'] . '</a>');
             echo('<div class="price">' . showNumber($item['price']) . '&nbsp;₫</div>');
             echo('</div>');
             echo('</li>');
@@ -51,14 +51,14 @@
     }
 
     function getItemListFromDB($type) {
-        require './connect-product.php';
-        $sql = "SELECT image1, image2, image3, image4, name, price FROM products WHERE type='$type' ORDER BY id ASC";
-        $result = mysqli_query($productLink, $sql);
+        require '../init.php';
+        $sql = "SELECT id, image1, image2, image3, image4, name, price FROM products WHERE type='$type' ORDER BY id ASC";
+        $result = mysqli_query($link, $sql);
         $res = array();
         while($row = mysqli_fetch_assoc($result)) {
-            array_push($res, array('image' => array($row['image1'], $row['image2'], $row['image3'], $row['image4']), 'name' => $row['name'], 'price' => $row['price']));
+            array_push($res, array('id' => $row['id'], 'image' => array($row['image1'], $row['image2'], $row['image3'], $row['image4']), 'name' => $row['name'], 'price' => $row['price']));
         }
-        mysqli_close($productLink);
+        mysqli_close($link);
         return $res;
     }
 ?>

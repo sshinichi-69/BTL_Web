@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 14, 2022 lúc 08:05 AM
+-- Thời gian đã tạo: Th12 14, 2022 lúc 06:15 PM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.1.12
 
@@ -18,8 +18,28 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `shop`
+-- Cơ sở dữ liệu: `logitech`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `carts`
+--
+
+CREATE TABLE `carts` (
+  `userid` int(11) NOT NULL,
+  `productid` int(11) NOT NULL,
+  `quantity` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `carts`
+--
+
+INSERT INTO `carts` (`userid`, `productid`, `quantity`) VALUES
+(5, 3, 2),
+(5, 5, 3);
 
 -- --------------------------------------------------------
 
@@ -60,14 +80,52 @@ INSERT INTO `products` (`id`, `type`, `image1`, `image2`, `image3`, `image4`, `n
 (14, 'audio', 'https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/lol-pro-x-headset/gallery/league-of-legends-pro-x-gaming-headset-gallery-1.png?v=1', 'https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/lol-pro-x-headset/gallery/league-of-legends-pro-x-gaming-headset-gallery-2.png?v=1', 'https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/lol-pro-x-headset/gallery/league-of-legends-pro-x-gaming-headset-gallery-3.png?v=1', 'https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/lol-pro-x-headset/gallery/league-of-legends-pro-x-gaming-headset-gallery-4.png?v=1', 'TAI NGHE CHƠI GAME PRO X', 3490000, 'Phiên bản đặc biệt của Tai nghe Chơi game PRO X với phong cách Liên Minh Huyền Thoại (League of Legends) chính thức, mang tính biểu tượng. Âm thanh trò chơi rõ như pha lê và việc giao tiếp cấp độ chuyên nghiệp để đạt được hiệu suất cao nhất trong League of Legends.'),
 (15, 'audio', 'https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g435/swatches/g435-gaming-headset-gallery-2-1-black.png?v=1', 'https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g435/swatches/g435-gaming-headset-gallery-2-black.png?v=1', 'https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g435/swatches/g435-gaming-headset-gallery-4-black.png?v=1', 'https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g435/swatches/g435-gaming-headset-gallery-5-black.png?v=1', 'G435', 1799000, 'Chơi game và nghe nhạc với sự thoải mái nhẹ nhàng và âm thanh mạnh mẽ, rõ ràng. Các mic tạo chùm kép giúp giảm tạp âm nền. Kết nối các thiết bị của bạn qua LIGHTSPEED không dây cấp độ chơi game và Bluetooth®.');
 
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(37) NOT NULL,
+  `password` varchar(37) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `created` datetime NOT NULL,
+  `first_name` varchar(31) NOT NULL,
+  `last_name` varchar(31) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `image`, `created`, `first_name`, `last_name`) VALUES
+(1, 'admin', '123', 'admin@somedomain.abc', 'https://upload.wikimedia.org/wikipedia/commons/2/27/Yorushika_Logo.jpg', '0000-00-00 00:00:00', 'Admin', 'Admin'),
+(5, 'khanhhq', 'khanhhq', '', 'https://t4.ftcdn.net/jpg/00/65/77/27/240_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg', '0000-00-00 00:00:00', 'Khánh', 'H? Qu?c');
+
 --
 -- Chỉ mục cho các bảng đã đổ
 --
 
 --
+-- Chỉ mục cho bảng `carts`
+--
+ALTER TABLE `carts`
+  ADD PRIMARY KEY (`userid`,`productid`),
+  ADD KEY `productid` (`productid`);
+
+--
 -- Chỉ mục cho bảng `products`
 --
 ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `users`
+--
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -79,6 +137,23 @@ ALTER TABLE `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT cho bảng `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `carts`
+--
+ALTER TABLE `carts`
+  ADD CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `carts_ibfk_2` FOREIGN KEY (`productid`) REFERENCES `products` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

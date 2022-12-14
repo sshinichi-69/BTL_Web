@@ -1,5 +1,5 @@
 <?php
-$link = new mysqli("localhost","root","","account");
+$link = new mysqli("localhost","root","","logitech");
 
 // Check connection
 if ($link -> connect_errno) {

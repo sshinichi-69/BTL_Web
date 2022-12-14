@@ -25,7 +25,11 @@
     grid-template-columns: auto auto auto auto;
 }
 
-#product > .image > .other > button {
+#product > .image > .other > a {
+
+}
+
+#product > .image > .other > a > button {
     padding: 5px;
     width: 100%;
     margin: 20px;
@@ -40,7 +44,7 @@
     outline: none;
 }
 
-#product > .image > .other > button > img {
+#product > .image > .other > a > button > img {
     width: 100%;
 }
 
@@ -77,9 +81,14 @@
     color: white;
 }
 
-#product > .detail > .buy > .quantity {
+#product > .detail > .buy > input {
     display: inline-block;
-    min-width: 30px;
-    min-height: 30px;
+    width: 30px;
+    height: 30px;
     text-align: center;
+    background-color: #251462;
+}
+
+#product > .detail > .buy > .id {
+    display: none;
 }
