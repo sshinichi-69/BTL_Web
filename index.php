@@ -20,10 +20,6 @@
   <meta name="author" content="" />
 
   <title>Logitech G</title>
-
-  <link rel="stylesheet" href="general.css">
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="themify-icons/themify-icons.css">
 
   <!-- font awesome style -->
@@ -38,6 +34,10 @@
 
   <!-- Custom styles for this template -->
   <link href="css/homepage.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -604,7 +604,7 @@
                     ĐỌC THÊM
                 </a>
                 </div>
-            </div>
+            </div>discount_section
             </div>
         </section>
 
