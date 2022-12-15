@@ -74,6 +74,17 @@
     font-weight: 700;
 }
 
+#account > .content > .edit > a {
+    font-weight: 700;
+    color: #00B8FC;
+    font-size: 16px;
+}
+
+#account > .content > .edit > a:hover {
+    color: #0090bf;
+    text-decoration: none;
+}
+
 #account > .content > .logout {
     font-weight: 700;
     font-size: 13px;

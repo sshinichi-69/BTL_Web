@@ -12,6 +12,18 @@
         mysqli_query($link, "DELETE FROM carts WHERE userid='$userId' AND productid='$productId'");
         mysqli_close($link);
     }
+
+    $notification = '';
+    if (isset($_POST['removeAll'])) {
+        require 'init.php';
+        $userId = $_SESSION['user']['id'];
+        mysqli_query($link, "DELETE FROM carts WHERE userid='$userId'");
+        mysqli_close($link);
+        $notification = '<div id="error">Thanh toán thành công</div>';
+    }
+    else {
+        $notification = '';
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +44,7 @@
 <body>
     <div id="body">
         <?php headerHTML(0) ?>
+        <?php echo($GLOBALS['notification']) ?>
         <div id="table" class="black-bgr">
             <table>
                 <tr>

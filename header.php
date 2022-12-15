@@ -19,7 +19,7 @@
         }
         echo('<li><a href="' . $innerAddr . 'my-account.php" class="uppercase"><i class="ti-user"></i>Tài khoản của tôi</a></li>');
         if (isset($_SESSION['user'])) {
-            echo('<li><a href="./my-account/logout.php"  class="uppercase">Đăng xuất</a></li>');
+            echo('<li><a href="' . $innerAddr . 'my-account/logout.php"  class="uppercase">Đăng xuất</a></li>');
         }
         echo('</ul>');
         echo('</li>');

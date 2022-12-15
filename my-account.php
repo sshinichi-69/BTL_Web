@@ -26,20 +26,25 @@
             <div class="content">
                 <?php
                     if (isset($_SESSION['user'])) {
-                        echo('<img src="' . $_SESSION['user']['image'] . '" alt="avatar" class="avatar">');
-                        echo('<div class="hello uppercase white-text">Hi, ' . $_SESSION['user']['first_name'] . '</div>');
-                        echo('<a href="my-account/logout.php" class="logout uppercase white-text">Đăng xuất</a>');
+                        ?>
+                        <img src="<?php echo($_SESSION['user']['image']) ?>" alt="avatar" class="avatar">
+                        <div class="hello uppercase white-text">Hi, <?php echo($_SESSION['user']['first_name']) ?></div>
+                        <div class="edit"><a href="my-account/account-information.php" class="uppercase">Chỉnh sửa hồ sơ</a></div>
+                        <a href="my-account/logout.php" class="logout uppercase white-text">Đăng xuất</a>
+                        <?php
                     }
                     else {
-                        echo('<div class="title uppercase white-text">Tài khoản của tôi</div>');
-                        echo('<div class="button">');
-                        echo('<button type="button" class="login">');
-                        echo('<a href="my-account/login.php" class="uppercase">Đăng nhập</a>');
-                        echo('</button>');
-                        echo('<button type="button" class="create-account">');
-                        echo('<a href="my-account/signup.php" class="uppercase">Tạo tài khoản</a>');
-                        echo('</button>');
-                        echo('</div>');
+                        ?>
+                        <div class="title uppercase white-text">Tài khoản của tôi</div>
+                        <div class="button">
+                            <button type="button" class="login">
+                                <a href="my-account/login.php" class="uppercase">Đăng nhập</a>
+                            </button>
+                            <button type="button" class="create-account">
+                                <a href="my-account/signup.php" class="uppercase">Tạo tài khoản</a>
+                            </button>
+                        </div>
+                        <?php
                     }
                 ?>
             </div>
