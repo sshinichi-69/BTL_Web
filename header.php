@@ -4,44 +4,79 @@
         for ($i = 0; $i < $inner; $i++) {
             $innerAddr = '../' . $innerAddr;
         }
-        // init header
-        echo('<div id="header" class="nav">');
-        echo('<ul>');
-        echo('<li class="left">');
-        echo('<ul>');
-        echo('<li class="logo"><a href="' . $innerAddr . 'index.php"><img src="' . $innerAddr . 'img/logo-logitech-overlay.svg" alt="logo" height="20"></a></li>');
-        echo('</ul>');
-        echo('</li>');
-        echo('<li class="right nav">');
-        echo('<ul>');
-        if (isset($_SESSION['user'])) {
-            echo('<li><a href="' . $innerAddr . 'cart.php"><i class="ti-shopping-cart"></i></a></li>');
-        }
-        echo('<li><a href="' . $innerAddr . 'my-account.php" class="uppercase"><i class="ti-user"></i>Tài khoản của tôi</a></li>');
-        if (isset($_SESSION['user'])) {
-            echo('<li><a href="' . $innerAddr . 'my-account/logout.php"  class="uppercase">Đăng xuất</a></li>');
-        }
-        echo('</ul>');
-        echo('</li>');
-        echo('</ul>');
-        echo('</div>');
-        // init navigation
-        echo('<div id="navigation" class="nav">');
-        echo('<ul>');
-        echo('<li><a href="' . $innerAddr . 'aboutus.php" class="uppercase">Giới thiệu</a></li>');
-        echo('<li><a href="' . $innerAddr . 'products.php" class="uppercase">Sản phẩm</a></li>');
-        echo('<li class="dropdown">');
-        echo('<a href="#" class="uppercase dropbtn">Bảng giá</a>');
-        echo('<div class="dropdown-content">');
-        echo('<a href="' . $innerAddr . 'products/gaming-mice.php" class="uppercase">Chuột chơi game</a>');
-        echo('<a href="' . $innerAddr . 'products/gaming-audio.php" class="uppercase">Âm thanh trò chơi</a>');
-        echo('<a href="' . $innerAddr . 'products/gaming-keyboards.php" class="uppercase">Bàn phím chơi game</a>');
-        echo('</div>');
-        echo('</li>');
-        echo('<li><a href="' . $innerAddr . 'contact.php" class="uppercase">Liên hệ</a></li>');
-        echo('<li><a href="' . $innerAddr . 'news.php" class="uppercase">Tin tức</a></li>');
-        echo('<li><a href="#"><i class="ti-search"></i></a></li>');
-        echo('</ul>');
-        echo('</div>');
-    }
-?>
+        ?>
+        <div class="desktop">
+        <!-- init header -->
+            <div id="header" class="nav">
+                <ul>
+                    <li class="left">
+                        <ul>
+                            <li class="logo"><a href="<?php echo($innerAddr) ?>index.php"><img src="<?php echo($innerAddr) ?>img/logo-logitech-overlay.svg" alt="logo" height="20"></a></li>
+                        </ul>
+                    </li>
+                    <li class="right nav">
+                        <ul>
+                        <?php if (isset($_SESSION['user'])) { ?>
+                            <li><a href="<?php echo($innerAddr) ?>cart.php"><i class="ti-shopping-cart"></i></a></li>
+                        <?php } ?>
+                            <li><a href="<?php echo($innerAddr) ?>my-account.php" class="uppercase"><i class="ti-user"></i>Tài khoản của tôi</a></li>
+                        <?php if (isset($_SESSION['user'])) { ?>
+                            <li><a href="<?php echo($innerAddr) ?>my-account/logout.php"  class="uppercase">Đăng xuất</a></li>
+                        <?php } ?>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- init navigation -->
+            <div id="navigation" class="nav">
+                <ul>
+                    <li><a href="<?php echo($innerAddr) ?>aboutus.php" class="uppercase">Giới thiệu</a></li>
+                    <li><a href="<?php echo($innerAddr) ?>products.php" class="uppercase">Sản phẩm</a></li>
+                    <li class="dropdown menu">
+                        <a href="#" class="uppercase dropbtn menu">Bảng giá</a>
+                        <div class="dropdown-content menu">
+                            <a href="<?php echo($innerAddr) ?>products/gaming-mice.php" class="uppercase">Chuột chơi game</a>
+                            <a href="<?php echo($innerAddr) ?>products/gaming-audio.php" class="uppercase">Âm thanh trò chơi</a>
+                            <a href="<?php echo($innerAddr) ?>products/gaming-keyboards.php" class="uppercase">Bàn phím chơi game</a>
+                        </div>
+                    </li>
+                    <li><a href="<?php echo($innerAddr) ?>contact.php" class="uppercase">Liên hệ</a></li>
+                    <li><a href="<?php echo($innerAddr) ?>news.php" class="uppercase">Tin tức</a></li>
+                    <li><a href="#"><i class="ti-search"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mobile">
+            <div class="left">
+                <div class="dropdown menu">
+                    <button class="dropbtn menu"><i class="ti-menu"></i></button>
+                    <div class="dropdown-content menu">
+                        <a href="<?php echo($innerAddr) ?>index.php" class="uppercase">Trang chủ</a>
+                        <a href="<?php echo($innerAddr) ?>aboutus.php" class="uppercase">Giới thiệu</a>
+                        <a href="<?php echo($innerAddr) ?>products.php" class="uppercase">Sản phẩm</a>
+                        <div class="dropdown submenu">
+                            <a href="#" class="uppercase dropbtn submenu">Bảng giá</a>
+                            <div class="dropdown-content submenu">
+                                <a href="<?php echo($innerAddr) ?>products/gaming-mice.php" class="uppercase">Chuột chơi game</a>
+                                <a href="<?php echo($innerAddr) ?>products/gaming-audio.php" class="uppercase">Âm thanh trò chơi</a>
+                                <a href="<?php echo($innerAddr) ?>products/gaming-keyboards.php" class="uppercase">Bàn phím chơi game</a>
+                            </div>
+                        </div>
+                        <a href="<?php echo($innerAddr) ?>contact.php" class="uppercase">Liên hệ</a>
+                        <a href="<?php echo($innerAddr) ?>news.php" class="uppercase">Tin tức</a>
+                        <?php if (isset($_SESSION['user'])) { ?>
+                            <a href="<?php echo($innerAddr) ?>cart.php">Giỏ hàng</a>
+                        <?php } ?>
+                            <a href="<?php echo($innerAddr) ?>my-account.php" class="uppercase"><i class="ti-user"></i>Tài khoản của tôi</a>
+                        <?php if (isset($_SESSION['user'])) { ?>
+                            <a href="<?php echo($innerAddr) ?>my-account/logout.php"  class="uppercase">Đăng xuất</a>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <button type="button"><i class="ti-search"></i></button>
+            </div>
+        </div>
+<?php } ?>

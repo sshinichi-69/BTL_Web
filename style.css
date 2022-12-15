@@ -324,3 +324,16 @@
     display:flex}
 .social-share .section-tittle{
     display:flex}
+
+@media screen and (max-width: 1024px) {
+    #slider {
+        background-image: url('https://resource.logitechg.com/w_1024,ar_3:4,c_limit,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/gaming/en/plp-landing/plp-landing-hero-1-tablet.png?v=1');
+        height: calc(100vh - 64px);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #slider {
+        background-image: url('https://resource.logitechg.com/w_719,ar_9:16,c_limit,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/gaming/en/plp-landing/plp-landing-hero-1-mobile.png?v=1');
+    }
+}
