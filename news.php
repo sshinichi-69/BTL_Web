@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <title>Tin tức của Logitech G</title>
 </head>
 

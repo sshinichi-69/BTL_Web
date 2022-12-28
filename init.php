@@ -1,5 +1,9 @@
 <?php
-$link = new mysqli("localhost","root","","logitech");
+$serverName = "localhost";
+$userName = "root";
+$password = "";
+$dbname = "logitech";
+$link = new mysqli($serverName, $userName, $password, $dbname);
 
 // Check connection
 if ($link -> connect_errno) {

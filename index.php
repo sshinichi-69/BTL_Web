@@ -19,6 +19,10 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
+<link rel="stylesheet" href="general.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="style.css">
+
   <title>Logitech G</title>
   <link rel="stylesheet" href="themify-icons/themify-icons.css">
 
@@ -34,10 +38,6 @@
 
   <!-- Custom styles for this template -->
   <link href="css/homepage.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="general.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>

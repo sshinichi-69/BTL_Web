@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 14, 2022 lúc 06:15 PM
+-- Thời gian đã tạo: Th12 16, 2022 lúc 07:13 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.1.12
 
@@ -32,14 +32,6 @@ CREATE TABLE `carts` (
   `productid` int(11) NOT NULL,
   `quantity` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `carts`
---
-
-INSERT INTO `carts` (`userid`, `productid`, `quantity`) VALUES
-(5, 3, 2),
-(5, 5, 3);
 
 -- --------------------------------------------------------
 
@@ -103,7 +95,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `image`, `created`, `first_name`, `last_name`) VALUES
 (1, 'admin', '123', 'admin@somedomain.abc', 'https://upload.wikimedia.org/wikipedia/commons/2/27/Yorushika_Logo.jpg', '0000-00-00 00:00:00', 'Admin', 'Admin'),
-(5, 'khanhhq', 'khanhhq', '', 'https://t4.ftcdn.net/jpg/00/65/77/27/240_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg', '0000-00-00 00:00:00', 'Khánh', 'H? Qu?c');
+(5, 'khanhhq', 'khanhhq', 'khanhhq@gmail.com', 'https://lh3.googleusercontent.com/a/AEdFTp6wOZu7GZdUJPxIvOXz1Xdazy0y0lR2JyNST4Wg=s96-c', '0000-00-00 00:00:00', 'Khánh', 'Hồ Quốc');
 
 --
 -- Chỉ mục cho các bảng đã đổ
